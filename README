@@ -1,0 +1,5 @@
+XMLBurger - In Development
+
+XMLBurger is a tool to convert XML documents into Java Objects.
+It is fast and suitable for large documents (Stax), specially XML documents with a strange structure, where XPaths are not really efficients as they have to be invocated too many times.
+Perfectly suitable for research purpose and specially for XMLs coming from biomedical repositories. 
