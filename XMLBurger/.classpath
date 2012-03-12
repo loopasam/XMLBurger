@@ -2,5 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/samuel/git/XMLBurger/XMLBurger/lib/stax2-api-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/samuel/git/XMLBurger/XMLBurger/lib/woodstox-core-lgpl-4.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
