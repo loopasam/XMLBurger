@@ -127,7 +127,7 @@ public class XMLBurger {
 	} catch (XMLStreamException e) {
 	    // TODO Auto-generated catch block
 	    //	    e.printStackTrace();
-	    return "No Text";
+	    return null;
 	}
     }
 
@@ -144,6 +144,6 @@ public class XMLBurger {
 		return this.reader.getAttributeValue(i);
 	    }
 	}
-	return "No Value";
+	return null;
     }
 }
