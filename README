@@ -1,5 +1,51 @@
 XMLBurger - In Development
 
+$+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                                                                             ..
++                          ...,,:~~~=======~::,,....                          ..
++                       .::=II77$ZZZZZZZZZZZ$$$$7++~,,..                      ..
++                   ..~~?$$ZZZZZZZZZZZZZZZZZZZZZZZZ$77++,..                   ..
++                  :??$$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ7==.                  ..
++               .==7ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ?::..              ..
++             ..=$$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ77~~.             ..
++           ..++$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$=..           ..
++          .==$$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$~~.          ..
++        ..~$$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ77:          ..
++        ,,IZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ?..        ..
++       .==ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==..      ..
++       ,77ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ77,,      ..
++       ~ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==.     ..
++     ..?ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ??.     ..
++     ,,7ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ77,     ..
++     ::$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$:     ..
++     ~~ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=     ..
++     ~~ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=     ..
++     ,,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,     ..
++                                                                             ..
++  .,,::::::::::::::::::::::::,,...                                .:::::,,.  ..
++::?$$$$ZZZZZZZZZZZZZZZZZZZZ$$77?==~,,...                       .,,+$$ZZ$$$?::..
+?IIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$77II+~~:....              ..=77ZZZZZZZZZII,,
+$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$II??=::,....   .~~??ZZZZZZZZZZZZZZ==
+ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$7??==:::+$$ZZZZZZZZZZZZZZZZ??
+$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$$ZZZZZZZZZZZZZZZZZZZ++
+IIIZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ77::
++::+7777$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$77?::..
++  ...,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,...  ..
++                                                                             ..
++     ::++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++:     ..
++     ==ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=     ..
++     ~~ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ=     ..
++     ~~ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ~     ..
++     ,,7ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$:     ..
++     ..?ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ??.     ..
++       :$$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$~~      ..
++       .==ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ++..      ..
++        ..+$$ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ$$+..        ..
++          .~~II$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$77?~~.          ..
++...............,:::::::::::::::::::::::::::::::::::::::::::::,,................
++...............,:::::::::::::::::::::::::::::::::::::::::::::,,................
+
+
 XMLBurger is a tool to convert XML documents into Java Objects.
 It is fast and suitable for large documents (Stax), specially XML documents with a strange structure, where XPaths are not really efficients as they have to be invocated too many times.
 Perfectly suitable for research purpose and specially for XMLs coming from biomedical repositories. 
