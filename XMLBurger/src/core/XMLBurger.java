@@ -77,11 +77,16 @@ public class XMLBurger {
      * @return
      * @throws XMLStreamException 
      */
-    public boolean isNotOver() throws XMLStreamException {
+    public boolean isNotOver() {
 	// TODO Auto-generated method stub
-	if(this.reader.hasNext()){
-	    this.eventType = this.reader.next();
-	    return true;
+	try {
+	    if(this.reader.hasNext()){
+	        this.eventType = this.reader.next();
+	        return true;
+	    }
+	} catch (XMLStreamException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
 	}
 	return false;
     }
@@ -103,15 +108,25 @@ public class XMLBurger {
      * @return
      * @throws XMLStreamException 
      */
-    public boolean inTag(String tag) throws XMLStreamException {
+    public boolean inTag(String tag) {
 	// TODO Auto-generated method stub
 	if(this.eventType == XMLStreamConstants.END_ELEMENT){
 	    if(this.reader.getName().getLocalPart().equals(tag)){
-		this.eventType = this.reader.next();
+		try {
+		    this.eventType = this.reader.next();
+		} catch (XMLStreamException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 		return false;
 	    }
 	}
-	this.eventType = this.reader.next();
+	try {
+	    this.eventType = this.reader.next();
+	} catch (XMLStreamException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	}
 	return true;
     }
 
