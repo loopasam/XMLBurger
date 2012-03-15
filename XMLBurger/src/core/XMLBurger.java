@@ -140,6 +140,7 @@ public class XMLBurger {
 
 	int numerOfAttribute = this.reader.getAttributeCount();
 	for (int i = 0; i < numerOfAttribute; i++) {
+	    //Deal with the exeption, like trying to get the attribute out of the start tag
 	    if(this.reader.getAttributeLocalName(i).equals(attribute)){
 		return this.reader.getAttributeValue(i);
 	    }
