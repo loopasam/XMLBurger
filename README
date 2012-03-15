@@ -12,15 +12,26 @@ Version: 1.0 - In dev.
 Version Date: March 2012
 Language: Java 6
 
-- What is it?
+*****************************************************************************
+Introduction:
 
+** What is XMLBurger? **
 XMLBurger is a Java library to convert the content of XML documents into Java objects. XMLBurger is fast (StAX) and easy to use. It it designed to parse XML documents with an odd structure or when the mapping to Java object is non-straightforward.
 
-- There is already plenty of libraries to do this out there, why should I use this one?
-
+** There is already plenty of libraries to do this out there (XPath, JAXB, etc...), why should I use this one? **
 XMLBurger should be used only for particular cases and is certainly not the best library for most of the tasks. 
 
-- When shall I use XMLBurger?
+** When shall I use XMLBurger? **
+To answer this question, consider first the XML structure of the document you are dealing with and how you would like to populate your Java objects out of it.
+If the document is rather small (let's say around a maximum of a couple of Mo), you should probably go for XPaths or JAXB, they are fairly efficient (specially JAXB) for small and not too complicated documents (XPaths), and the code is easy to write (JAXB is a bit more tricky than XPaths, which are a piece of cake).
+If the document is quite large and the structure of the XML document doesn't really match the desired structure of your Java objects, then the previous options could become really complicated and slow.
+The alternative is to go for pure StAX, which is fast but usually the code is fairly difficult to understand and not fun at all to do in the first place.
+XMLBurger is a library designed to quickly and easily implement the mapping from the XML document into your Java objects while using StAX.
 
-To answer this question, consider first the XML structure of the document you are dealing with and how you would like to populate Java objects out of it.
+** What are examples of use-cases for XMLBurger? **
+You are doing the prototype of an application, and you don't want to spend too much time binding XML elements to your objects (with JAXB for example).
+You want to quickly parse large XML documents with a weird structure (JAXB and XPath are inefficient), recurring problem in biology/bioinformatics.
+You need to parse only once an XML document, you therefore don't want to spend too much time developing a heavy architecture around it, typical use-case in research.
+Basically, all the time you have to use StAX alone, XMLBurger is here to help you to focus on the mapping, rather on the code for the parser.
 
+** How do I use XMLBurger? Where is the documentation? **
