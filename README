@@ -10,13 +10,17 @@ XMLBurger
 Author: Samuel Croset
 Version: 1.0 - In dev.
 Version Date: March 2012
+Language: Java 6
 
-What is it?
+- What is it?
+
 XMLBurger is a Java library to convert the content of XML documents into Java objects. XMLBurger is fast (StAX) and easy to use. It it designed to parse XML documents with an odd structure or when the mapping to Java object is non-straightforward.
 
-There is already plenty of libraries to do this out there, why should I use this one?
-XMLBurger should be used only for particular cases and is not the best library for most of tasks. 
+- There is already plenty of libraries to do this out there, why should I use this one?
 
-When shall I use XMLBurger?
+XMLBurger should be used only for particular cases and is certainly not the best library for most of the tasks. 
+
+- When shall I use XMLBurger?
+
 To answer this question, consider first the XML structure of the document you are dealing with and how you would like to populate Java objects out of it.
 
