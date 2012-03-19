@@ -8,11 +8,11 @@ __  __          __    ___
 
 XMLBurger
 Author: Samuel Croset
-Version: 1.0 - In dev.
+Version: 1.0
 Version Date: March 2012
-Language: Java 6
+Language: Java 1.6
 
-*****************************************************************************
+**********************************************************************************
 Introduction:
 
 ** What is XMLBurger? **
@@ -33,10 +33,16 @@ If the document is quite large and the structure of the XML document doesn't rea
 The alternative is to go for pure StAX, which is fast but usually the code is fairly difficult to understand and not fun at all to do in the first place.
 XMLBurger is a library designed to quickly and easily implement the mapping from the XML document into your Java objects while using StAX.
 
+
 ** What are examples of use-cases for XMLBurger? **
-You are doing the prototype of an application, and you don't want to spend too much time binding XML elements to your objects (with JAXB for example).
-You want to quickly parse large XML documents with a weird structure (JAXB and XPath are inefficient), recurring problem in biology/bioinformatics.
-You need to parse only once an XML document, you therefore don't want to spend too much time developing a heavy architecture around it, typical use-case in research.
-Basically, all the time you have to use StAX alone, XMLBurger is here to help you to focus on the mapping, rather on the code for the parser.
+
+- You are doing the prototype of an application, and you don't want to spend too much time binding XML elements to your objects (with JAXB for example).
+- You want to quickly parse large XML documents with a weird structure (JAXB and XPath are inefficient), recurring problem in biology/bioinformatics.
+- You need to parse only once an XML document, you therefore don't want to spend too much time developing a heavy architecture around it, typical use-case in research.
+- Basically, all the time you have to use StAX alone, XMLBurger is here to help you to focus on the mapping, rather on the code for the parser.
+
 
 ** How do I use XMLBurger? Where is the documentation? **
+
+- https://github.com/loopasam/XMLBurger/wiki
+- Inside the package 'example' of the source file.

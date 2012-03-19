@@ -16,7 +16,7 @@ import javax.xml.stream.XMLStreamReader;
 /**
  * Library for efficient parsing of odd XML files. Particularly useful while dealing with odd XML document, where the mapping to Java Object is difficult.
  * @author Samuel Croset
- * @version 1
+ * @version 1.0
  *
  */
 public class XMLBurger {
