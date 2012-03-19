@@ -9,7 +9,7 @@ import core.XMLBurger;
  * https://github.com/loopasam/XMLBurger/blob/master/XMLBurger/data/example.xml
  * The XML file is available within the "data" folder of the source code.
  * The Java Objects are to be defined according to your needs, in this case
- * let's assume we want to populate a library object with some books objects.
+ * let's assume we want to populate a Library object with some Book objects.
  * This example is just to get you started with XMLBurger style of
  * programming, in this case, Xpath would have been more suitable :-)
  * 
@@ -32,8 +32,9 @@ public class Example {
 
 		//For example you could create you own object you want to populate out of the XML:
 		//Library library = new Library();
+		System.out.println("Library created");
 
-		//Step 4, the "inTag" method: While we are still in this tag, we will do things.
+		//Step 4, the "inTag" method: While in this tag, we will do more things.
 		while(burger.inTag("BookCatalogue")){
 
 		    //Step 3 again, as we are inside the tag "BookCatalogue" (Step 4),
@@ -76,22 +77,17 @@ public class Example {
 				System.out.println("\tPrice: " + price);
 				//The price id added to our book object:
 				//book.setPrice(price);
-
 			    }
 			}
 			//We exit of the "Book" tag, we had our book object into the library object:
 			//library.addBook(book);
 		    }
 		    //Exit of the tag "Book"
-
 		}
 		//Exit of the "BookCatalogue" tag, more business logic could happen,
-		//such as saving the library object for instance.
+		//such as saving the Library object for instance.
 	    }
-
 	    //End of step 2, the XML document is fully parsed
 	}
-
     }
-
 }

@@ -14,7 +14,7 @@ import javax.xml.stream.XMLStreamReader;
 
 
 /**
- * Library for efficient parsing of XML files. Particularly useful while dealing with odd XML document, where the mapping to Java Object is difficult.
+ * Library for efficient parsing of odd XML files. Particularly useful while dealing with odd XML document, where the mapping to Java Object is difficult.
  * @author Samuel Croset
  * @version 1
  *
@@ -53,7 +53,7 @@ public class XMLBurger {
 
     /**
      * Create an XMLBurger object from an XML file. 
-     * @param path
+     * @param pathOfXML
      */
     public XMLBurger(String pathOfXML) {
 
