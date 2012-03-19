@@ -14,7 +14,9 @@ import javax.xml.stream.XMLStreamReader;
 
 
 /**
+ * Library for efficient parsing of XML files. Particularly useful while dealing with odd XML document, where the mapping to Java Object is difficult.
  * @author Samuel Croset
+ * @version 1
  *
  */
 public class XMLBurger {
@@ -49,43 +51,41 @@ public class XMLBurger {
     }
 
 
-
     /**
+     * Create an XMLBurger object from an XML file. 
      * @param path
      */
-    public XMLBurger(String path) {
-	// TODO Auto-generated constructor stub
+    public XMLBurger(String pathOfXML) {
+
 	try {
-	    this.fileInputStream = new FileInputStream(path);
+	    this.fileInputStream = new FileInputStream(pathOfXML);
 	} catch (FileNotFoundException e) {
-	    // TODO Auto-generated catch block
+	    System.err.println("Cannot find the XML document: " + pathOfXML);
 	    e.printStackTrace();
 	}
 	try {
 	    this.reader = XMLInputFactory.newInstance().createXMLStreamReader(fileInputStream);
 	} catch (XMLStreamException e) {
-	    // TODO Auto-generated catch block
+	    System.err.println("Problem while reading the XML document");
 	    e.printStackTrace();
 	} catch (FactoryConfigurationError e) {
-	    // TODO Auto-generated catch block
+	    System.err.println("Problem with the XML instatiation");
 	    e.printStackTrace();
 	}
-
     }
 
     /**
-     * @return
+     * @return whether the XML document is over or not.
      * @throws XMLStreamException 
      */
     public boolean isNotOver() {
-	// TODO Auto-generated method stub
 	try {
 	    if(this.reader.hasNext()){
-	        this.eventType = this.reader.next();
-	        return true;
+		this.eventType = this.reader.next();
+		return true;
 	    }
 	} catch (XMLStreamException e) {
-	    // TODO Auto-generated catch block
+	    System.err.println("The XML document has no next elements.");
 	    e.printStackTrace();
 	}
 	return false;
@@ -93,10 +93,9 @@ public class XMLBurger {
 
     /**
      * @param tag
-     * @return
+     * @return whether or not the current parsed tag is the tag entered as input
      */
     public boolean tag(String tag) {
-	// TODO Auto-generated method stub
 	if(this.eventType == XMLStreamConstants.START_ELEMENT && this.reader.getName().getLocalPart().equals(tag)){
 	    return true;
 	}
@@ -105,17 +104,16 @@ public class XMLBurger {
 
     /**
      * @param tag
-     * @return
+     * @return whether or not the cursor is still in the tag entered in input.
      * @throws XMLStreamException 
      */
     public boolean inTag(String tag) {
-	// TODO Auto-generated method stub
 	if(this.eventType == XMLStreamConstants.END_ELEMENT){
 	    if(this.reader.getName().getLocalPart().equals(tag)){
 		try {
 		    this.eventType = this.reader.next();
 		} catch (XMLStreamException e) {
-		    // TODO Auto-generated catch block
+		    System.err.println("The reader has no next element. Check whether you are correctly using the methods.");
 		    e.printStackTrace();
 		}
 		return false;
@@ -124,7 +122,7 @@ public class XMLBurger {
 	try {
 	    this.eventType = this.reader.next();
 	} catch (XMLStreamException e) {
-	    // TODO Auto-generated catch block
+	    System.err.println("The reader has no next element. Check whether you are correctly using the methods.");
 	    e.printStackTrace();
 	}
 	return true;
@@ -132,30 +130,26 @@ public class XMLBurger {
 
 
     /**
-     * @return
+     * @return the text contained by the tag.
      */
     public String getTagText() {
-	// TODO Auto-generated method stub
 	try {
 	    String text = this.reader.getElementText();
 	    return text;
 	} catch (XMLStreamException e) {
-	    // TODO Auto-generated catch block
-	    //	    e.printStackTrace();
+	    System.err.println("There is not text on this element, please correct your code accordingly.");
+	    e.printStackTrace();
 	    return null;
 	}
     }
 
     /**
      * @param attribute
-     * @return
+     * @return the value of the attribute.
      */
     public String getTagAttribute(String attribute) {
-	// TODO Auto-generated method stub
-
 	int numerOfAttribute = this.reader.getAttributeCount();
 	for (int i = 0; i < numerOfAttribute; i++) {
-	    //Deal with the exeption, like trying to get the attribute out of the start tag
 	    if(this.reader.getAttributeLocalName(i).equals(attribute)){
 		return this.reader.getAttributeValue(i);
 	    }

@@ -1,10 +1,5 @@
 package example;
 
-import java.io.FileNotFoundException;
-import java.util.Date;
-
-import javax.xml.stream.FactoryConfigurationError;
-import javax.xml.stream.XMLStreamException;
 
 import core.XMLBurger;
 
@@ -15,7 +10,7 @@ import core.XMLBurger;
 public class Example {
     public static void main(String[] args)  {
 
-	XMLBurger burger = new XMLBurger("data/example.xml");
+	XMLBurger burger = new XMLBurger("data/asdexample.xml");
 
 	while(burger.isNotOver()){
 	    if(burger.tag("BookCatalogue")){
@@ -25,8 +20,8 @@ public class Example {
 			while(burger.inTag("Book")){
 			    
 			    if(burger.tag("Date")){
-				String dateString = burger.getTagText();
-				
+				String date = burger.getTagText();
+				System.out.println("Date: " + date);
 			    }
 			    
 			    if(burger.tag("Publisher")){
