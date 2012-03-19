@@ -10,7 +10,9 @@ import javax.xml.stream.FactoryConfigurationError;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
+
+import org.codehaus.stax2.XMLStreamReader2;
+
 
 
 /**
@@ -22,7 +24,7 @@ import javax.xml.stream.XMLStreamReader;
 public class XMLBurger {
 
     private FileInputStream fileInputStream;
-    private XMLStreamReader reader;
+    private XMLStreamReader2 reader;
     private int eventType;
 
 
@@ -34,11 +36,11 @@ public class XMLBurger {
 	return eventType;
     }
 
-    public void setReader(XMLStreamReader reader) {
+    public void setReader(XMLStreamReader2 reader) {
 	this.reader = reader;
     }
 
-    public XMLStreamReader getReader() {
+    public XMLStreamReader2 getReader() {
 	return reader;
     }
 
@@ -64,7 +66,7 @@ public class XMLBurger {
 	    e.printStackTrace();
 	}
 	try {
-	    this.reader = XMLInputFactory.newInstance().createXMLStreamReader(fileInputStream);
+	    this.reader = (XMLStreamReader2) XMLInputFactory.newInstance().createXMLStreamReader(fileInputStream);
 	} catch (XMLStreamException e) {
 	    System.err.println("Problem while reading the XML document");
 	    e.printStackTrace();
