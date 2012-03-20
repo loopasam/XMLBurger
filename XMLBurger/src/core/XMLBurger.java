@@ -77,6 +77,11 @@ public class XMLBurger {
     }
 
     /**
+     * Main loop, over the content of the entire XML.<br>
+     * <Usage:<br>
+     * while(burger.isNotOver()){<br>
+     * 	//Do things and check for tags<br>
+     * }<br>
      * @return whether the XML document is over or not.
      * @throws XMLStreamException 
      */
@@ -94,6 +99,11 @@ public class XMLBurger {
     }
 
     /**
+     * Check if the tag passed as parameter is encountered.<br>
+     * Usage:<br>
+     * if(burger.tag("NameOfYourTag")){<br>
+     *	//Do something, like instantiating of of your object or looping over the tag using the inTag("") method<br>
+     * }<br>
      * @param tag
      * @return whether or not the current parsed tag is the tag entered as input
      */
@@ -105,6 +115,11 @@ public class XMLBurger {
     }
 
     /**
+     * Stay inside the tag passed as parameter.<br>
+     * Usage:<br>
+     * while(burger.inTag("NameOfYourTag")){<br>
+     * 	//Do something while staying inside the loop, usually looking for over tags via the tag() method.<br>
+     * }<br>
      * @param tag
      * @return whether or not the cursor is still in the tag entered in input.
      * @throws XMLStreamException 
@@ -132,6 +147,14 @@ public class XMLBurger {
 
 
     /**
+     * Return the text associated with the current tag. The construct has to be like this: [yourTag]the text[/yourTag]<br>
+     * Usage:<br>
+     * if(burger.tag("NameOfYourTag")){<br>
+     * 	//Do something, for example instantiate one of your object.<br>
+     * 	//Retrieve the text inside the tag "NameOfYourTag".<br>
+     * 	String text = burger.getTagText();<br>
+     * 	//You can do something with this value, for example setting a property of an object.<br>
+     * }<br>
      * @return the text contained by the tag.
      */
     public String getTagText() {
@@ -146,6 +169,14 @@ public class XMLBurger {
     }
 
     /**
+     * Return the value associated with the current tag attribute. The construct has to be like this: [yourTag attribute="value"]the text[/yourTag]<br>
+     * Usage:<br>
+     * if(burger.tag("NameOfYourTag")){<br>
+     * 	//Do something, for example instantiate one of your object.<br>
+     * 	//Retrieve the value of the specified attribute.<br>
+     * 	String value = burger.getTagAttribute("attribute");<br>
+     * 	//You can do something with this value, for example setting a property of an object.<br>
+     * }<br>
      * @param attribute
      * @return the value of the attribute.
      */
