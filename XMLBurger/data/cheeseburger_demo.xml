@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cheeseburger>
+  <Bread id="1">Salted</Bread>
+  <Filling>
+    <Vegetable type="salad"></Vegetable>
+    <Tomato color="red">Slice</Tomato>
+    <Steak />
+  </Filling>
+  <Bread id="2">Salted</Bread>
+</Cheeseburger>
